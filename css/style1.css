@@ -1,0 +1,165 @@
+:root{
+    /* colors */
+    --text-black: #0f0f0f;
+    --lighter-green: #ffffe5;
+
+    /* font-family */
+    --arial: Arial, Helvetica, sans-serif;
+    --livvic: 'Livvic', sans-serif;
+    --mszheng: 'Ma Shan Zheng',sans-serif;
+
+}
+
+body{
+    margin: 0%;
+    background: #eaeaea;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ------------------ navbar ----------------- */
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;    
+    background: var(--lighter-green); 
+    opacity: 0.9;
+    margin: 0; 
+    width: 11rem;    
+    flex-wrap: wrap;
+}
+
+
+
+
+.text-color{
+    color: var(--text-black);
+}
+
+
+nav{
+    padding: 0 2rem;
+    background: var(--lighter-green);
+    opacity: 0.9;
+    position: relative;    
+}
+
+nav .nav-brand a{
+    display: block;
+    padding: 1.3rem 1rem;
+    font-family: var(--livvic);
+    font-size: 1.2rem;   
+}
+
+
+.nav-brand:hover{
+    background: gray;
+    cursor: pointer;
+}
+
+.nav-brand:hover a{
+    color: white;
+}
+
+nav .nav-items{
+    list-style-type: none;
+    margin: 0;   
+}
+
+nav .nav-items .nav-link{
+    padding: 1.3rem 1rem;
+    font-family: var(--livvic);
+    font-size: 1.2rem;
+}
+
+.nav-link:hover{
+    background: gray;
+    cursor: pointer;
+}
+
+.nav-link:hover a{
+    color: white;
+}
+
+
+nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    /*cursor: pointer;*/
+    display: none;   
+}
+
+nav .toggle-collapse .toggle-icons{
+    display: flex;   
+    justify-content: flex-end;
+    padding: 0.5rem 3rem;
+}
+
+#burgerIcon{
+    display: inlineblock;
+    width: 2rem;
+    height:3rem; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: var(--arial);
+    font-size: 3.0rem;
+    font-weight: bold;
+}
+#burgerIcon:hover{
+    cursor: pointer;
+}
+
+
+ul.flex-col{
+    list-style-type: none;
+    margin: 0;
+}
+
+.flex-col .nav-link{
+    padding: 0.3rem 2.5rem;
+    margin-left: -3rem;
+    font-family: var(--livvic);
+    font-size: 1.1rem;
+}
+
+div.hide-byCSS{
+    display: none;   
+}
+
+.hide-v{
+    display: none;
+}
+  
+.show-v{
+    display: initial;
+}
+
+@media only screen and (max-width: 800px){
+  body{
+    margin: 0%;
+    background: lightgray;
+  }
+  nav .nav-items{
+    display: none;
+  }
+ 
+  nav .toggle-collapse{
+    display: initial;
+  }
+  
+  div.hide-byCSS{
+    display: initial;   
+  }
+}
+
+
